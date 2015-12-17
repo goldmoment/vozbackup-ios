@@ -7,3 +7,24 @@
 //
 
 import Foundation
+
+class ThreadsInteractor: NSObject, ThreadsInteractorInput, ThreadsDataManagerDelegate {
+    var dataManager: ThreadsDataManager?
+    var threadsPresenter: ThreadsInteractorOutput?
+    
+    // MARK: ThreadsInteractorInput
+    func getThreads(num: Int) {
+        dataManager?.loadThreads()
+    }
+    
+    func getThreadsNext(lastThreadsID: Int, num: Int) {
+        
+    }
+    
+    //MARK: ThreadsDataManagerDelegate
+    func query(didQueryWithResult data: [AnyObject]?, and error: NSError?) {
+        if error == nil {
+            threadsPresenter?.loadThreadsComplete(data)
+        }
+    }
+}

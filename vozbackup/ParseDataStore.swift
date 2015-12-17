@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ParseDataManager: NSObject, BaseDataManager {
+class ParseDataStore: NSObject, BaseDataStore {
     
     //MARK: BaseDataManager property
     var tableName: String? {
@@ -18,7 +18,7 @@ class ParseDataManager: NSObject, BaseDataManager {
         }
     }
     var dbConnection: AnyObject? = ParseConnection.defaultParse
-    var delegate: BaseDataManagerDelegate?
+    var delegate: BaseDataStoreDelegate?
     
     //MARK: Private property
     var parseQuery: PFQuery?

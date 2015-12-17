@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+protocol ThreadsModuleInterface {
+    func loadThreads(num: Int)
+    func loadThreadsNext(lastThreadsID: Int, num: Int)
+    func loadComments(threadsID: Int)
+}

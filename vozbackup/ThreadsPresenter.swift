@@ -7,3 +7,29 @@
 //
 
 import Foundation
+
+class ThreadsPresenter: NSObject, ThreadsInteractorOutput, ThreadsModuleInterface {
+    var threadsInteractor: ThreadsInteractorInput?
+    var threadsViewController: ThreadsViewInterface?
+    var threadsWireframe: ThreadsWireframe?
+    
+    func normalizeThreads(data: [AnyObject]?) -> [AnyObject]? {
+        return nil
+    }
+    
+    //MARK: ThreadsInteractorOutput
+    func loadThreadsComplete(data: [AnyObject]?) {
+        threadsViewController?.showThreads(data)
+    }
+    
+    //MARK: ThreadsModuleInterface
+    func loadThreads(num: Int) {
+        threadsInteractor?.getThreads(50)
+    }
+    func loadThreadsNext(lastThreadsID: Int, num: Int){
+        
+    }
+    func loadComments(threadsID: Int) {
+        
+    }
+}

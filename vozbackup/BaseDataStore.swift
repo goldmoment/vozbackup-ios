@@ -7,17 +7,17 @@
 //
 
 import Foundation
-@objc protocol BaseDataCoreDelegate {
+@objc protocol BaseDataStoreDelegate {
     optional func insert(object: AnyObject!, didInsertWithResult result: Bool, error: NSError?)
     optional func update(object: AnyObject!, didUpdatetWithResult result: Bool, error: NSError?)
     optional func remove(object: AnyObject!, didRemoveWithResult result: Bool, error: NSError?)
     optional func query(didQueryWithResult data: [AnyObject]?, error: NSError?)
 }
 
-protocol BaseDataCore {
+protocol BaseDataStore {
     var tableName: String? {get set}
     var dbConnection: AnyObject? {get set}
-    var delegate: BaseDataCoreDelegate? {get set}
+    var delegate: BaseDataStoreDelegate? {get set}
     
     func insert(data: [String: AnyObject]!)
     func update(id: String!, data: [String: AnyObject]!)

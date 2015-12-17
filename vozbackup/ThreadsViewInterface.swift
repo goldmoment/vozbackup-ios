@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+protocol ThreadsViewInterface {
+    func showThreads(data: [AnyObject]?)
+}

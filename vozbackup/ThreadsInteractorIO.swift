@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+protocol ThreadsInteractorInput {
+    func getThreads(num: Int)
+    func getThreadsNext(lastThreadsID: Int, num: Int)
+}
+
+protocol ThreadsInteractorOutput {
+    func loadThreadsComplete(data: [AnyObject]?)
+}
