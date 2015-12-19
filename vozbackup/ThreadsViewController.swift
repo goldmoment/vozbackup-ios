@@ -15,8 +15,10 @@ class ThreadsViewController: UIViewController, ThreadsViewInterface {
     var data: [AnyObject]! = [] {
         didSet {
             self.threadsTable.reloadData()
+            isLoaded = false
         }
     }
+    var isLoaded: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,10 +34,7 @@ class ThreadsViewController: UIViewController, ThreadsViewInterface {
 
     //MARK: ThreadsViewInterface method
     func showThreads(data: [AnyObject]?) {
-        self.data = data
-//        for object in data! {
-//            print(object["title"])
-//        }
+        self.data = self.data + data!
     }
 }
 
@@ -55,5 +54,12 @@ extension ThreadsViewController: UITableViewDataSource {
         
         cell.textLabel?.text = data[indexPath.row]["title"] as? String
         return cell
+    }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.row == data.count - 1 && isLoaded == false {
+            self.threadsPresenter?.loadThreadsNext(data[indexPath.row]["threadID"] as? String, num: 50)
+            isLoaded = true
+        }
     }
 }

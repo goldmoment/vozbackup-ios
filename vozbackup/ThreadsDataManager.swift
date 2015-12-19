@@ -19,14 +19,22 @@ class ThreadsDataManager: NSObject, BaseDataStoreDelegate {
         }
     }
     var threadsInteractor: ThreadsDataManagerDelegate?
+    var totalThreads: Int = 0
     
     override init() {
         super.init()
     }
 
     func loadThreads() {
-        let conditions = ["skip": 0, "limit": 50, "orderByDescending": "updatedAt"]
-        dataStore?.query(conditions)
+        let conditions = ["skip": totalThreads, "limit": 50, "orderByDescending": "updatedAt"]
+        dataStore?.query(conditions as! [String : AnyObject])
+        totalThreads += 50
+    }
+    
+    func loadThreadsNext(lastThreadId: String?, num: Int) {
+        let conditions = ["skip": totalThreads, "limit": num, "orderByDescending": "updatedAt", "lessThan": ["updatedAt": lastThreadId!]]
+        dataStore?.query(conditions as! [String : AnyObject])
+        totalThreads += num
     }
     
     func query(threadsID: Int, num: Int) {

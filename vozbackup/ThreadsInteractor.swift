@@ -17,8 +17,8 @@ class ThreadsInteractor: NSObject, ThreadsInteractorInput, ThreadsDataManagerDel
         dataManager?.loadThreads()
     }
     
-    func getThreadsNext(lastThreadsID: Int, num: Int) {
-        
+    func getThreadsNext(lastThreadsID: String?, num: Int) {
+        dataManager?.loadThreads()
     }
     
     //MARK: ThreadsDataManagerDelegate

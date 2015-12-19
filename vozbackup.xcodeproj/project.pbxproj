@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C92207241C254874009A4CC7 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92207231C254874009A4CC7 /* Constant.swift */; settings = {ASSET_TAGS = (); }; };
 		C938588A1C1C25A80091CF99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93858891C1C25A80091CF99 /* AppDelegate.swift */; };
 		C938588C1C1C25A80091CF99 /* ThreadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938588B1C1C25A80091CF99 /* ThreadsViewController.swift */; };
 		C938588F1C1C25A80091CF99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C938588D1C1C25A80091CF99 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		8B41D11ADA1DD86F8B95CE00 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C92207231C254874009A4CC7 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		C93858861C1C25A80091CF99 /* vozbackup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vozbackup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C93858891C1C25A80091CF99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C938588B1C1C25A80091CF99 /* ThreadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadsViewController.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				C9DFADDB1C1DE22700E599EC /* vozbackup-Bridging-Header.h */,
+				C92207231C254874009A4CC7 /* Constant.swift */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 			files = (
 				C93858AB1C1C29EE0091CF99 /* ThreadsDataManager.swift in Sources */,
 				C93858A91C1C29D30091CF99 /* ThreadsInteractor.swift in Sources */,
+				C92207241C254874009A4CC7 /* Constant.swift in Sources */,
 				C9DFADE21C207F0700E599EC /* RootWireframe.swift in Sources */,
 				C93858A71C1C29B50091CF99 /* ThreadsInteractorIO.swift in Sources */,
 				C93858AD1C1C2A190091CF99 /* ThreadsModuleInterface.swift in Sources */,

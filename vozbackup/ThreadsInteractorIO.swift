@@ -10,7 +10,7 @@ import Foundation
 
 protocol ThreadsInteractorInput {
     func getThreads(num: Int)
-    func getThreadsNext(lastThreadsID: Int, num: Int)
+    func getThreadsNext(lastThreadsID: String?, num: Int)
 }
 
 protocol ThreadsInteractorOutput {

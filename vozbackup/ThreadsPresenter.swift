@@ -26,10 +26,10 @@ class ThreadsPresenter: NSObject, ThreadsInteractorOutput, ThreadsModuleInterfac
     func loadThreads(num: Int) {
         threadsInteractor?.getThreads(50)
     }
-    func loadThreadsNext(lastThreadsID: Int, num: Int){
-        
+    func loadThreadsNext(lastThreadsID: String?, num: Int){
+        threadsInteractor?.getThreadsNext(lastThreadsID, num: num)
     }
-    func loadComments(threadsID: Int) {
+    func loadComments(threadsID: String?) {
         
     }
 }
