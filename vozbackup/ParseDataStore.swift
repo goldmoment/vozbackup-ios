@@ -102,24 +102,24 @@ class ParseDataStore: NSObject, BaseDataStore {
             default:
                 if let subConditions = conditions[key] as? [String: AnyObject] {
                     for subKey in subConditions.keys {
-                        switch subKey {
+                        switch key {
                         case "equalTo":
-                            parseQuery?.whereKey(key, equalTo: subConditions[subKey]!)
+                            parseQuery?.whereKey(subKey, equalTo: subConditions[subKey]!)
                             break
                         case "greaterThan":
-                            parseQuery?.whereKey(key, greaterThan: subConditions[subKey]!)
+                            parseQuery?.whereKey(subKey, greaterThan: subConditions[subKey]!)
                             break
                         case "greaterThanOrEqualTo":
-                            parseQuery?.whereKey(key, greaterThanOrEqualTo: subConditions[subKey]!)
+                            parseQuery?.whereKey(subKey, greaterThanOrEqualTo: subConditions[subKey]!)
                             break
                         case "lessThan":
-                            parseQuery?.whereKey(key, lessThan: subConditions[subKey]!)
+                            parseQuery?.whereKey(subKey, lessThan: subConditions[subKey]!)
                             break
                         case "lessThanOrEqualTo":
-                            parseQuery?.whereKey(key, lessThanOrEqualTo: subConditions[subKey]!)
+                            parseQuery?.whereKey(subKey, lessThanOrEqualTo: subConditions[subKey]!)
                             break
                         case "notEqualTo":
-                            parseQuery?.whereKey(key, notEqualTo: subConditions[subKey]!)
+                            parseQuery?.whereKey(subKey, notEqualTo: subConditions[subKey]!)
                             break
                         default:
                             break

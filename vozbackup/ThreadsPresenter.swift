@@ -18,7 +18,7 @@ class ThreadsPresenter: NSObject, ThreadsInteractorOutput, ThreadsModuleInterfac
     }
     
     //MARK: ThreadsInteractorOutput
-    func loadThreadsComplete(data: [AnyObject]?) {
+    func loadThreadsComplete(data: [ThreadItem]?) {
         threadsViewController?.showThreads(data)
     }
     
@@ -26,10 +26,10 @@ class ThreadsPresenter: NSObject, ThreadsInteractorOutput, ThreadsModuleInterfac
     func loadThreads(num: Int) {
         threadsInteractor?.getThreads(50)
     }
-    func loadThreadsNext(lastThreadsID: String?, num: Int){
-        threadsInteractor?.getThreadsNext(lastThreadsID, num: num)
+    func loadThreadsNext(lastItem: ThreadItem?, num: Int) {
+        threadsInteractor?.getThreadsNext(lastItem, num: num)
     }
     func loadComments(threadsID: String?) {
-        
+        threadsWireframe?.loadComments(threadsID)
     }
 }

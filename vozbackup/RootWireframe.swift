@@ -9,6 +9,8 @@
 import Foundation
 
 class RootWireframe: NSObject {
+    var navigationController: UINavigationController?
+    
     func showRootViewController(viewController: UIViewController, inWindow: UIWindow) {
         let navigationController = navigationControllerFromWindow(inWindow)
         navigationController.viewControllers = [viewController]
@@ -17,6 +19,7 @@ class RootWireframe: NSObject {
     func navigationControllerFromWindow(window: UIWindow) -> UINavigationController {
         let navigationController = window.rootViewController as! UINavigationController
         navigationController.navigationBar.barTintColor = kBarColor
+        self.navigationController = navigationController
         return navigationController
     }
 }

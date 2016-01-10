@@ -1,0 +1,37 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,500,500italic,700,700italic,900,900italic&subset=latin,latin-ext,cyrillic,cyrillic-ext,greek-ext,greek,vietnamese);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext,cyrillic-ext,cyrillic,greek-ext,greek,vietnamese);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700&subset=latin,latin-ext,greek-ext,greek,vietnamese,cyrillic,cyrillic-ext);
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Roboto !important;
+    font-size: 12pt;
+    font-weight: 300;
+    overflow-x: hidden;
+}
+
+body {
+/*    background-color: #F06;*/*/
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 320px;
+    overflow-x: hidden;
+}
+
+.voz-bbcode-quote > tbody > tr > td {
+    border-left: 2px solid rgba(46, 204, 113,1.0);
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.voz-post-message {
+    border: 1px solid rgba(46, 204, 113,1.0);
+}
+
+img {
+    position: relative;
+    max-height: 100%;
+    max-width: 100%;
+}

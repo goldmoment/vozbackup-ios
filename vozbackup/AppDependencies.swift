@@ -37,6 +37,24 @@ class AppDependencies {
         
         threadsInteractor.dataManager = threadsDataManager
         threadsInteractor.threadsPresenter = threadsPresenter
+        
+        let commentsPresenter = CommentsPresenter()
+        let commentsDataManager = CommentsDataManager()
+        let commentsInteractor = CommentsInteractor()
+        let commentsWireframe = CommentsWireframe()
+        
+        commentsWireframe.commentsPresenter = commentsPresenter
+        
+        commentsPresenter.commentsInteractor = commentsInteractor
+        commentsPresenter.commentsWireframe = commentsWireframe
+        
+        commentsDataManager.dataStore = ParseDataStore(tableName: "comments")
+        commentsDataManager.commentsInteractor = commentsInteractor
+        
+        commentsInteractor.dataManager = commentsDataManager
+        commentsInteractor.commentsPresenter = commentsPresenter
+        
+        threadsWireframe.commentsWireframe = commentsWireframe
 
     }
 }

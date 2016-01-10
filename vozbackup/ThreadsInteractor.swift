@@ -14,16 +14,16 @@ class ThreadsInteractor: NSObject, ThreadsInteractorInput, ThreadsDataManagerDel
     
     // MARK: ThreadsInteractorInput
     func getThreads(num: Int) {
-        dataManager?.loadThreads()
+        dataManager?.loadThreads(50)
     }
     
-    func getThreadsNext(lastThreadsID: String?, num: Int) {
-        dataManager?.loadThreads()
+    func getThreadsNext(lastItem: ThreadItem?, num: Int) {
+        dataManager?.loadThreadsNext(lastItem, num: num)
     }
     
     //MARK: ThreadsDataManagerDelegate
-    func query(didQueryWithResult data: [AnyObject]?, and error: NSError?) {
-        if error == nil {
+    func query(didQueryWithResult data: [ThreadItem]?, and error: NSError?) {
+        if let data = data where error == nil {
             threadsPresenter?.loadThreadsComplete(data)
         }
     }

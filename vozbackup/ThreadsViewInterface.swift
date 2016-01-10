@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ThreadsViewInterface {
-    func showThreads(data: [AnyObject]?)
+    func showThreads(data: [ThreadItem]?)
 }

@@ -12,7 +12,7 @@ class ThreadsViewController: UIViewController, ThreadsViewInterface {
     
     var threadsPresenter: ThreadsModuleInterface?
     @IBOutlet weak var threadsTable: UITableView!
-    var data: [AnyObject]! = [] {
+    var data: [ThreadItem]! = [] {
         didSet {
             self.threadsTable.reloadData()
             isLoaded = false
@@ -23,8 +23,14 @@ class ThreadsViewController: UIViewController, ThreadsViewInterface {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.view.layoutIfNeeded()
+        
         threadsTable.delegate = self
         threadsTable.dataSource = self
+        threadsTable.separatorStyle = UITableViewCellSeparatorStyle.None
+        threadsTable.rowHeight = UITableViewAutomaticDimension
+        threadsTable.estimatedRowHeight = 100.0
+        threadsTable.layoutIfNeeded()
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,7 +39,7 @@ class ThreadsViewController: UIViewController, ThreadsViewInterface {
     }
 
     //MARK: ThreadsViewInterface method
-    func showThreads(data: [AnyObject]?) {
+    func showThreads(data: [ThreadItem]?) {
         self.data = self.data + data!
     }
 }
@@ -50,16 +56,29 @@ extension ThreadsViewController: UITableViewDataSource {
         return data.count
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell =  tableView.dequeueReusableCellWithIdentifier("lblCell", forIndexPath: indexPath)
+        let cell =  tableView.dequeueReusableCellWithIdentifier("threadCell", forIndexPath: indexPath)
         
-        cell.textLabel?.text = data[indexPath.row]["title"] as? String
+        let lblTitle = cell.viewWithTag(100) as! UILabel
+        let lblReply = cell.viewWithTag(200) as! UILabel
+        
+        lblTitle.text = data[indexPath.row].title
+        lblReply.text = String(data[indexPath.row].replies)
+        
+        let wrapperView = cell.viewWithTag(50) as UIView!
+        let border = CALayer()
+        border.frame = CGRectMake(0.0, 0.0, threadsTable.frame.width - 16, 1.0)
+        border.backgroundColor = kBarColor.CGColor
+        wrapperView.layer.addSublayer(border)
+        
         return cell
     }
-    
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.row == data.count - 1 && isLoaded == false {
-            self.threadsPresenter?.loadThreadsNext(data[indexPath.row]["threadID"] as? String, num: 50)
+            self.threadsPresenter?.loadThreadsNext(data[indexPath.row], num: 50)
             isLoaded = true
         }
+    }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        threadsPresenter?.loadComments(data[indexPath.row].threadId)
     }
 }

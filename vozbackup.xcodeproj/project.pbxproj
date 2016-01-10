@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		C92207241C254874009A4CC7 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92207231C254874009A4CC7 /* Constant.swift */; settings = {ASSET_TAGS = (); }; };
+		C92207271C266320009A4CC7 /* ThreadItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92207261C266320009A4CC7 /* ThreadItem.swift */; settings = {ASSET_TAGS = (); }; };
+		C92207331C282C8A009A4CC7 /* CommentsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92207321C282C8A009A4CC7 /* CommentsWireframe.swift */; settings = {ASSET_TAGS = (); }; };
+		C92207351C282CB3009A4CC7 /* CommentsViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92207341C282CB3009A4CC7 /* CommentsViewInterface.swift */; settings = {ASSET_TAGS = (); }; };
+		C92207371C282D10009A4CC7 /* CommentsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92207361C282D10009A4CC7 /* CommentsPresenter.swift */; settings = {ASSET_TAGS = (); }; };
+		C92207391C282D2D009A4CC7 /* CommentsModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92207381C282D2D009A4CC7 /* CommentsModuleInterface.swift */; settings = {ASSET_TAGS = (); }; };
+		C922073B1C282D60009A4CC7 /* CommentsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C922073A1C282D60009A4CC7 /* CommentsDataManager.swift */; settings = {ASSET_TAGS = (); }; };
+		C922073D1C282D86009A4CC7 /* CommentsInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C922073C1C282D86009A4CC7 /* CommentsInteractorIO.swift */; settings = {ASSET_TAGS = (); }; };
+		C922073F1C282DA9009A4CC7 /* CommentsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C922073E1C282DA9009A4CC7 /* CommentsInteractor.swift */; settings = {ASSET_TAGS = (); }; };
+		C92207411C2831E7009A4CC7 /* CommentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92207401C2831E7009A4CC7 /* CommentItem.swift */; settings = {ASSET_TAGS = (); }; };
+		C92207431C2D0911009A4CC7 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92207421C2D0911009A4CC7 /* CommentsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		C92207461C2D8BD3009A4CC7 /* myCSS.css in Resources */ = {isa = PBXBuildFile; fileRef = C92207451C2D8BD3009A4CC7 /* myCSS.css */; settings = {ASSET_TAGS = (); }; };
 		C938588A1C1C25A80091CF99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93858891C1C25A80091CF99 /* AppDelegate.swift */; };
 		C938588C1C1C25A80091CF99 /* ThreadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C938588B1C1C25A80091CF99 /* ThreadsViewController.swift */; };
 		C938588F1C1C25A80091CF99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C938588D1C1C25A80091CF99 /* Main.storyboard */; };
@@ -20,6 +31,17 @@
 		C93858AF1C1C2A3A0091CF99 /* ThreadsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93858AE1C1C2A3A0091CF99 /* ThreadsPresenter.swift */; settings = {ASSET_TAGS = (); }; };
 		C93858B11C1C2A530091CF99 /* ThreadsViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93858B01C1C2A530091CF99 /* ThreadsViewInterface.swift */; settings = {ASSET_TAGS = (); }; };
 		C93858B31C1C2A670091CF99 /* ThreadsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93858B21C1C2A670091CF99 /* ThreadsWireframe.swift */; settings = {ASSET_TAGS = (); }; };
+		C95704ED1C42345E00DC07E2 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C95704E31C4223F100DC07E2 /* OpenSans-Bold.ttf */; };
+		C95704EE1C42345E00DC07E2 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C95704E41C4223F100DC07E2 /* OpenSans-BoldItalic.ttf */; };
+		C95704EF1C42345E00DC07E2 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C95704E51C4223F100DC07E2 /* OpenSans-ExtraBold.ttf */; };
+		C95704F01C42345E00DC07E2 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C95704E61C4223F100DC07E2 /* OpenSans-ExtraBoldItalic.ttf */; };
+		C95704F11C42345E00DC07E2 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C95704E71C4223F100DC07E2 /* OpenSans-Italic.ttf */; };
+		C95704F21C42345E00DC07E2 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C95704E81C4223F100DC07E2 /* OpenSans-Light.ttf */; };
+		C95704F31C42345E00DC07E2 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C95704E91C4223F100DC07E2 /* OpenSans-LightItalic.ttf */; };
+		C95704F41C42345E00DC07E2 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C95704EA1C4223F100DC07E2 /* OpenSans-Regular.ttf */; };
+		C95704F51C42345E00DC07E2 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C95704EB1C4223F100DC07E2 /* OpenSans-Semibold.ttf */; };
+		C95704F61C42345E00DC07E2 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C95704EC1C4223F100DC07E2 /* OpenSans-SemiboldItalic.ttf */; };
+		C99C3DC31C356366000B489B /* CommentsWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99C3DC21C356366000B489B /* CommentsWebView.swift */; settings = {ASSET_TAGS = (); }; };
 		C9DFADD41C1DE14F00E599EC /* BaseDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DFADD31C1DE14F00E599EC /* BaseDataStore.swift */; settings = {ASSET_TAGS = (); }; };
 		C9DFADD71C1DE19500E599EC /* ParseConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DFADD61C1DE19500E599EC /* ParseConnection.swift */; settings = {ASSET_TAGS = (); }; };
 		C9DFADD91C1DE1C100E599EC /* ParseDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DFADD81C1DE1C100E599EC /* ParseDataStore.swift */; settings = {ASSET_TAGS = (); }; };
@@ -31,6 +53,17 @@
 /* Begin PBXFileReference section */
 		8B41D11ADA1DD86F8B95CE00 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C92207231C254874009A4CC7 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		C92207261C266320009A4CC7 /* ThreadItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadItem.swift; sourceTree = "<group>"; };
+		C92207321C282C8A009A4CC7 /* CommentsWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsWireframe.swift; sourceTree = "<group>"; };
+		C92207341C282CB3009A4CC7 /* CommentsViewInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsViewInterface.swift; sourceTree = "<group>"; };
+		C92207361C282D10009A4CC7 /* CommentsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsPresenter.swift; sourceTree = "<group>"; };
+		C92207381C282D2D009A4CC7 /* CommentsModuleInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsModuleInterface.swift; sourceTree = "<group>"; };
+		C922073A1C282D60009A4CC7 /* CommentsDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsDataManager.swift; sourceTree = "<group>"; };
+		C922073C1C282D86009A4CC7 /* CommentsInteractorIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsInteractorIO.swift; sourceTree = "<group>"; };
+		C922073E1C282DA9009A4CC7 /* CommentsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsInteractor.swift; sourceTree = "<group>"; };
+		C92207401C2831E7009A4CC7 /* CommentItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentItem.swift; sourceTree = "<group>"; };
+		C92207421C2D0911009A4CC7 /* CommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		C92207451C2D8BD3009A4CC7 /* myCSS.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = myCSS.css; sourceTree = "<group>"; };
 		C93858861C1C25A80091CF99 /* vozbackup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vozbackup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C93858891C1C25A80091CF99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C938588B1C1C25A80091CF99 /* ThreadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadsViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +78,17 @@
 		C93858AE1C1C2A3A0091CF99 /* ThreadsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadsPresenter.swift; sourceTree = "<group>"; };
 		C93858B01C1C2A530091CF99 /* ThreadsViewInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadsViewInterface.swift; sourceTree = "<group>"; };
 		C93858B21C1C2A670091CF99 /* ThreadsWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadsWireframe.swift; sourceTree = "<group>"; };
+		C95704E31C4223F100DC07E2 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		C95704E41C4223F100DC07E2 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		C95704E51C4223F100DC07E2 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		C95704E61C4223F100DC07E2 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		C95704E71C4223F100DC07E2 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		C95704E81C4223F100DC07E2 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		C95704E91C4223F100DC07E2 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		C95704EA1C4223F100DC07E2 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		C95704EB1C4223F100DC07E2 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		C95704EC1C4223F100DC07E2 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		C99C3DC21C356366000B489B /* CommentsWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsWebView.swift; sourceTree = "<group>"; };
 		C9DFADD31C1DE14F00E599EC /* BaseDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDataStore.swift; sourceTree = "<group>"; };
 		C9DFADD61C1DE19500E599EC /* ParseConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseConnection.swift; sourceTree = "<group>"; };
 		C9DFADD81C1DE1C100E599EC /* ParseDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseDataStore.swift; sourceTree = "<group>"; };
@@ -73,6 +117,93 @@
 				8B41D11ADA1DD86F8B95CE00 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C92207251C26630F009A4CC7 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				C92207261C266320009A4CC7 /* ThreadItem.swift */,
+				C92207401C2831E7009A4CC7 /* CommentItem.swift */,
+			);
+			name = Module;
+			sourceTree = "<group>";
+		};
+		C922072A1C282BC6009A4CC7 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				C92207311C282C3E009A4CC7 /* Presenter */,
+				C92207301C282C35009A4CC7 /* View */,
+				C922072F1C282C29009A4CC7 /* Wireframe */,
+			);
+			name = "User Interface";
+			sourceTree = "<group>";
+		};
+		C922072B1C282BD2009A4CC7 /* Module Interface */ = {
+			isa = PBXGroup;
+			children = (
+				C92207381C282D2D009A4CC7 /* CommentsModuleInterface.swift */,
+			);
+			name = "Module Interface";
+			sourceTree = "<group>";
+		};
+		C922072C1C282BE0009A4CC7 /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				C922072E1C282C16009A4CC7 /* Interactor */,
+				C922072D1C282C0C009A4CC7 /* Manager */,
+			);
+			name = "Application Logic";
+			sourceTree = "<group>";
+		};
+		C922072D1C282C0C009A4CC7 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C922073A1C282D60009A4CC7 /* CommentsDataManager.swift */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		C922072E1C282C16009A4CC7 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				C922073C1C282D86009A4CC7 /* CommentsInteractorIO.swift */,
+				C922073E1C282DA9009A4CC7 /* CommentsInteractor.swift */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		C922072F1C282C29009A4CC7 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				C92207321C282C8A009A4CC7 /* CommentsWireframe.swift */,
+			);
+			name = Wireframe;
+			sourceTree = "<group>";
+		};
+		C92207301C282C35009A4CC7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C92207341C282CB3009A4CC7 /* CommentsViewInterface.swift */,
+				C92207421C2D0911009A4CC7 /* CommentsViewController.swift */,
+				C99C3DC21C356366000B489B /* CommentsWebView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C92207311C282C3E009A4CC7 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C92207361C282D10009A4CC7 /* CommentsPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		C92207441C2D8BB3009A4CC7 /* CSS */ = {
+			isa = PBXGroup;
+			children = (
+				C92207451C2D8BD3009A4CC7 /* myCSS.css */,
+			);
+			name = CSS;
 			sourceTree = "<group>";
 		};
 		C938587D1C1C25A80091CF99 = {
@@ -128,6 +259,9 @@
 		C938589D1C1C26940091CF99 /* Comments */ = {
 			isa = PBXGroup;
 			children = (
+				C922072C1C282BE0009A4CC7 /* Application Logic */,
+				C922072B1C282BD2009A4CC7 /* Module Interface */,
+				C922072A1C282BC6009A4CC7 /* User Interface */,
 			);
 			name = Comments;
 			sourceTree = "<group>";
@@ -204,6 +338,8 @@
 		C93858B41C1C2A7F0091CF99 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				C95704E21C4223D700DC07E2 /* Fonts */,
+				C92207441C2D8BB3009A4CC7 /* CSS */,
 				C93858921C1C25A80091CF99 /* LaunchScreen.storyboard */,
 				C938588D1C1C25A80091CF99 /* Main.storyboard */,
 				C93858901C1C25A80091CF99 /* Assets.xcassets */,
@@ -214,11 +350,29 @@
 		C93858B51C1C9BCE0091CF99 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C92207251C26630F009A4CC7 /* Module */,
 				C9DFADE01C207EF800E599EC /* View */,
 				C9DFADDA1C1DE20F00E599EC /* Utility */,
 				C9DFADD21C1DE0A200E599EC /* Store */,
 			);
 			name = Common;
+			sourceTree = "<group>";
+		};
+		C95704E21C4223D700DC07E2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C95704E31C4223F100DC07E2 /* OpenSans-Bold.ttf */,
+				C95704E41C4223F100DC07E2 /* OpenSans-BoldItalic.ttf */,
+				C95704E51C4223F100DC07E2 /* OpenSans-ExtraBold.ttf */,
+				C95704E61C4223F100DC07E2 /* OpenSans-ExtraBoldItalic.ttf */,
+				C95704E71C4223F100DC07E2 /* OpenSans-Italic.ttf */,
+				C95704E81C4223F100DC07E2 /* OpenSans-Light.ttf */,
+				C95704E91C4223F100DC07E2 /* OpenSans-LightItalic.ttf */,
+				C95704EA1C4223F100DC07E2 /* OpenSans-Regular.ttf */,
+				C95704EB1C4223F100DC07E2 /* OpenSans-Semibold.ttf */,
+				C95704EC1C4223F100DC07E2 /* OpenSans-SemiboldItalic.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		C9DFADD21C1DE0A200E599EC /* Store */ = {
@@ -299,7 +453,6 @@
 				TargetAttributes = {
 					C93858851C1C25A80091CF99 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = G3TWPQRVYX;
 					};
 				};
 			};
@@ -326,9 +479,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C95704ED1C42345E00DC07E2 /* OpenSans-Bold.ttf in Resources */,
+				C95704EE1C42345E00DC07E2 /* OpenSans-BoldItalic.ttf in Resources */,
+				C95704EF1C42345E00DC07E2 /* OpenSans-ExtraBold.ttf in Resources */,
+				C95704F01C42345E00DC07E2 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				C95704F11C42345E00DC07E2 /* OpenSans-Italic.ttf in Resources */,
+				C95704F21C42345E00DC07E2 /* OpenSans-Light.ttf in Resources */,
+				C95704F31C42345E00DC07E2 /* OpenSans-LightItalic.ttf in Resources */,
+				C95704F41C42345E00DC07E2 /* OpenSans-Regular.ttf in Resources */,
+				C95704F51C42345E00DC07E2 /* OpenSans-Semibold.ttf in Resources */,
+				C95704F61C42345E00DC07E2 /* OpenSans-SemiboldItalic.ttf in Resources */,
 				C93858941C1C25A80091CF99 /* LaunchScreen.storyboard in Resources */,
 				C93858911C1C25A80091CF99 /* Assets.xcassets in Resources */,
 				C938588F1C1C25A80091CF99 /* Main.storyboard in Resources */,
+				C92207461C2D8BD3009A4CC7 /* myCSS.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,10 +536,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C92207371C282D10009A4CC7 /* CommentsPresenter.swift in Sources */,
 				C93858AB1C1C29EE0091CF99 /* ThreadsDataManager.swift in Sources */,
 				C93858A91C1C29D30091CF99 /* ThreadsInteractor.swift in Sources */,
 				C92207241C254874009A4CC7 /* Constant.swift in Sources */,
+				C922073B1C282D60009A4CC7 /* CommentsDataManager.swift in Sources */,
 				C9DFADE21C207F0700E599EC /* RootWireframe.swift in Sources */,
+				C92207391C282D2D009A4CC7 /* CommentsModuleInterface.swift in Sources */,
 				C93858A71C1C29B50091CF99 /* ThreadsInteractorIO.swift in Sources */,
 				C93858AD1C1C2A190091CF99 /* ThreadsModuleInterface.swift in Sources */,
 				C9DFADD71C1DE19500E599EC /* ParseConnection.swift in Sources */,
@@ -383,10 +550,18 @@
 				C93858B31C1C2A670091CF99 /* ThreadsWireframe.swift in Sources */,
 				C93858B11C1C2A530091CF99 /* ThreadsViewInterface.swift in Sources */,
 				C93858AF1C1C2A3A0091CF99 /* ThreadsPresenter.swift in Sources */,
+				C92207411C2831E7009A4CC7 /* CommentItem.swift in Sources */,
+				C92207271C266320009A4CC7 /* ThreadItem.swift in Sources */,
+				C92207331C282C8A009A4CC7 /* CommentsWireframe.swift in Sources */,
 				C938588C1C1C25A80091CF99 /* ThreadsViewController.swift in Sources */,
 				C9DFADDF1C1DE52700E599EC /* AppDependencies.swift in Sources */,
+				C922073D1C282D86009A4CC7 /* CommentsInteractorIO.swift in Sources */,
 				C9DFADD41C1DE14F00E599EC /* BaseDataStore.swift in Sources */,
+				C922073F1C282DA9009A4CC7 /* CommentsInteractor.swift in Sources */,
+				C92207351C282CB3009A4CC7 /* CommentsViewInterface.swift in Sources */,
+				C92207431C2D0911009A4CC7 /* CommentsViewController.swift in Sources */,
 				C938588A1C1C25A80091CF99 /* AppDelegate.swift in Sources */,
+				C99C3DC31C356366000B489B /* CommentsWebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +676,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = vozbackup/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -517,6 +693,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = vozbackup/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

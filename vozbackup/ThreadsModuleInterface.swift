@@ -10,6 +10,6 @@ import Foundation
 
 protocol ThreadsModuleInterface {
     func loadThreads(num: Int)
-    func loadThreadsNext(lastThreadsID: String?, num: Int)
+    func loadThreadsNext(lastItem: ThreadItem?, num: Int)
     func loadComments(threadsID: String?)
 }

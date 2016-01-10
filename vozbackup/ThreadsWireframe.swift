@@ -15,6 +15,7 @@ class ThreadsWireframe: NSObject {
     var threadsPresenter: ThreadsPresenter?
     var rootWireframe : RootWireframe?
     var threadsViewController: ThreadsViewController?
+    var commentsWireframe: CommentsWireframe?
     
     func presentThreadFromWindows(windows: UIWindow) {
         let viewController = threadsViewControllerFromStoryboard()
@@ -29,11 +30,14 @@ class ThreadsWireframe: NSObject {
         let storyboard = mainStoryboard()
         let viewController = storyboard.instantiateViewControllerWithIdentifier(kThreadsViewControllerIdentifier) as! ThreadsViewController
         return viewController
-        
     }
     
     func mainStoryboard() -> UIStoryboard {
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         return storyboard
+    }
+    
+    func loadComments(threadsId: String?) {
+        commentsWireframe?.presentComments(rootWireframe?.navigationController, threadId: threadsId)
     }
 }

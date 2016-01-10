@@ -9,7 +9,7 @@
 import Foundation
 
 protocol ThreadsDataManagerDelegate {
-    func query(didQueryWithResult data: [AnyObject]?, and error: NSError?)
+    func query(didQueryWithResult data: [ThreadItem]?, and error: NSError?)
 }
 
 class ThreadsDataManager: NSObject, BaseDataStoreDelegate {
@@ -25,14 +25,15 @@ class ThreadsDataManager: NSObject, BaseDataStoreDelegate {
         super.init()
     }
 
-    func loadThreads() {
-        let conditions = ["skip": totalThreads, "limit": 50, "orderByDescending": "updatedAt"]
+    func loadThreads(num: Int) {
+        totalThreads = 0
+        let conditions = ["skip": totalThreads, "limit": num, "orderByDescending": ["createdAt"]]
         dataStore?.query(conditions as! [String : AnyObject])
-        totalThreads += 50
+        totalThreads += num
     }
     
-    func loadThreadsNext(lastThreadId: String?, num: Int) {
-        let conditions = ["skip": totalThreads, "limit": num, "orderByDescending": "updatedAt", "lessThan": ["updatedAt": lastThreadId!]]
+    func loadThreadsNext(lastItem: ThreadItem?, num: Int) {
+        let conditions = ["skip": totalThreads, "limit": num, "orderByDescending": ["updatedAt"], "lessThan": ["updatedAt": lastItem!.updatedAt]]
         dataStore?.query(conditions as! [String : AnyObject])
         totalThreads += num
     }
@@ -43,8 +44,17 @@ class ThreadsDataManager: NSObject, BaseDataStoreDelegate {
     
     //MARK: BaseDataManagerDelegate
     func query(didQueryWithResult data: [AnyObject]?, error: NSError?) {
-        if error == nil {
-            threadsInteractor?.query(didQueryWithResult: data, and: error)
+        if let data = data where error == nil {
+            var result: [ThreadItem] = []
+            for item in data {
+                result.append(ThreadItem(threadId: item["threadId"] as! String,
+                    title: item["title"] as! String,
+                    views: item["views"] as! Int,
+                    replies: item["replies"] as! Int,
+                    createdAt: item.createdAt!!,
+                    updatedAt: item.updatedAt!!))
+            }
+            threadsInteractor?.query(didQueryWithResult: result, and: error)
         }
     }
 
