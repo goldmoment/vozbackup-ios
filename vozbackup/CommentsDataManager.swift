@@ -49,6 +49,7 @@ class CommentsDataManager: NSObject, BaseDataStoreDelegate {
             for item in data {
                 result.append(CommentItem(cmtId: item["cmtId"] as! String,
                                         threadId: item["threadId"] as! String,
+                                        author: item["author"] as! String,
                                         avater: item["avater"] as! String,
                                         content: item["content"] as! String,
                                         index: item["index"] as! Int,

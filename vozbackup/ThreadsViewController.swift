@@ -19,6 +19,7 @@ class ThreadsViewController: UIViewController, ThreadsViewInterface {
         }
     }
     var isLoaded: Bool = false
+    var isTop: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +42,7 @@ class ThreadsViewController: UIViewController, ThreadsViewInterface {
     //MARK: ThreadsViewInterface method
     func showThreads(data: [ThreadItem]?) {
         self.data = self.data + data!
+        isTop = false
     }
 }
 
@@ -80,5 +82,17 @@ extension ThreadsViewController: UITableViewDataSource {
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         threadsPresenter?.loadComments(data[indexPath.row].threadId)
+    }
+    
+    func scrollViewDidScrollToTop(scrollView: UIScrollView) {
+        data = []
+        threadsPresenter?.loadThreads(50)
+    }
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        if threadsTable.contentOffset.y < -139 && isTop == false {
+            isTop = true
+            data = []
+            threadsPresenter?.loadThreads(50)
+        }
     }
 }

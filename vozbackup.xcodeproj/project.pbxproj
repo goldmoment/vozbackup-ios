@@ -42,6 +42,7 @@
 		C95704F51C42345E00DC07E2 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C95704EB1C4223F100DC07E2 /* OpenSans-Semibold.ttf */; };
 		C95704F61C42345E00DC07E2 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C95704EC1C4223F100DC07E2 /* OpenSans-SemiboldItalic.ttf */; };
 		C99C3DC31C356366000B489B /* CommentsWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99C3DC21C356366000B489B /* CommentsWebView.swift */; settings = {ASSET_TAGS = (); }; };
+		C9AA88AD1C44878200605B1A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AA88AC1C44878200605B1A /* Extensions.swift */; settings = {ASSET_TAGS = (); }; };
 		C9DFADD41C1DE14F00E599EC /* BaseDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DFADD31C1DE14F00E599EC /* BaseDataStore.swift */; settings = {ASSET_TAGS = (); }; };
 		C9DFADD71C1DE19500E599EC /* ParseConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DFADD61C1DE19500E599EC /* ParseConnection.swift */; settings = {ASSET_TAGS = (); }; };
 		C9DFADD91C1DE1C100E599EC /* ParseDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DFADD81C1DE1C100E599EC /* ParseDataStore.swift */; settings = {ASSET_TAGS = (); }; };
@@ -89,6 +90,7 @@
 		C95704EB1C4223F100DC07E2 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		C95704EC1C4223F100DC07E2 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
 		C99C3DC21C356366000B489B /* CommentsWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsWebView.swift; sourceTree = "<group>"; };
+		C9AA88AC1C44878200605B1A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C9DFADD31C1DE14F00E599EC /* BaseDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDataStore.swift; sourceTree = "<group>"; };
 		C9DFADD61C1DE19500E599EC /* ParseConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseConnection.swift; sourceTree = "<group>"; };
 		C9DFADD81C1DE1C100E599EC /* ParseDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseDataStore.swift; sourceTree = "<group>"; };
@@ -398,6 +400,7 @@
 			children = (
 				C9DFADDB1C1DE22700E599EC /* vozbackup-Bridging-Header.h */,
 				C92207231C254874009A4CC7 /* Constant.swift */,
+				C9AA88AC1C44878200605B1A /* Extensions.swift */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -537,6 +540,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C92207371C282D10009A4CC7 /* CommentsPresenter.swift in Sources */,
+				C9AA88AD1C44878200605B1A /* Extensions.swift in Sources */,
 				C93858AB1C1C29EE0091CF99 /* ThreadsDataManager.swift in Sources */,
 				C93858A91C1C29D30091CF99 /* ThreadsInteractor.swift in Sources */,
 				C92207241C254874009A4CC7 /* Constant.swift in Sources */,
