@@ -18,14 +18,22 @@ class CommentsViewController: UIViewController, CommentsViewInterface {
             self.loadWebView()
         }
     }
+    var isUpdate = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        commentsWeb.scrollView.delegate = self;
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    deinit {
+        commentsWeb.scrollView.delegate = nil
+        commentsWeb.delegate = nil
     }
     
     func loadWebView() {
@@ -41,6 +49,7 @@ class CommentsViewController: UIViewController, CommentsViewInterface {
             content = content.replace("src=\"/", by: "src=\"https://vozforums.com/")
             content = content.replace("style=\"border:1px inset", by: "")
             content = content.replace("src=\"im", by: "src=\"https://vozforums.com/im");
+            content = content.replace("Originally Posted by ", by: "");
             
             contentWeb += "<div class='cmt-content shadow'>"+info+content+"</div>"
         }
@@ -52,5 +61,14 @@ class CommentsViewController: UIViewController, CommentsViewInterface {
     //MARK: ThreadsViewInterface method
     func showComments(data: [CommentItem]?) {
         self.data = self.data + data!
+    }
+}
+
+extension CommentsViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        if (scrollView.contentSize.height - scrollView.contentOffset.y < scrollView.frame.height - 100 && isUpdate == false) {
+            print("Need updated")
+            isUpdate = true
+        }
     }
 }

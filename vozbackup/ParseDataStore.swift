@@ -72,6 +72,8 @@ class ParseDataStore: NSObject, BaseDataStore {
         }
     }
     func query(conditions: [String: AnyObject]!) {
+        self.parseQuery?.cancel()
+        self.parseQuery = PFQuery(className: tableName!)
         
         for key in conditions.keys {
             switch key {

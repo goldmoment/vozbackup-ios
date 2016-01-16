@@ -19,6 +19,7 @@ class RootWireframe: NSObject {
     func navigationControllerFromWindow(window: UIWindow) -> UINavigationController {
         let navigationController = window.rootViewController as! UINavigationController
         navigationController.navigationBar.barTintColor = kBarColor
+        navigationController.navigationBar.tintColor = kBarTintColor
         self.navigationController = navigationController
         return navigationController
     }

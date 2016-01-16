@@ -33,7 +33,7 @@ class ThreadsDataManager: NSObject, BaseDataStoreDelegate {
     }
     
     func loadThreadsNext(lastItem: ThreadItem?, num: Int) {
-        let conditions = ["skip": totalThreads, "limit": num, "orderByDescending": ["updatedAt"], "lessThan": ["updatedAt": lastItem!.updatedAt]]
+        let conditions = ["limit": num, "orderByDescending": ["createdAt"], "lessThan": ["createdAt": lastItem!.createdAt]]
         dataStore?.query(conditions as! [String : AnyObject])
         totalThreads += num
     }

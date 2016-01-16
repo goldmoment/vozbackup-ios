@@ -52,6 +52,10 @@ img {
     transition: all 0.2s ease-in-out;
 }
 
+.voz-post-message > i {
+    display: none;
+}
+
 .cmt-author {
     position: relative;
     display: block;
